@@ -1,3 +1,6 @@
+using PremiumCalculatorAPI.ServiceLayer;
+using PremiumCalculatorAPI.RepoLayer;
+;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<iService, APIServices>();
+builder.Services.AddTransient<iRepo, APIRepository>();
 
 var app = builder.Build();
 
