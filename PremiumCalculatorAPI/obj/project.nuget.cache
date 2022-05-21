@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iBc1+OmR1n3qK0i7F3SnfiC3DzckxNCTRojkLUchCrHiO2mJakDTL9hYQVo9fR7Pjp/mcQYyLx7OTU0eHti3Rg==",
+  "success": true,
+  "projectFilePath": "C:\\Ram\\Course\\Traning_Self\\premiumCalculator\\API\\PremiumCalculatorAPI\\PremiumCalculatorAPI\\PremiumCalculatorAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RAM\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\RAM\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\RAM\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\RAM\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\RAM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\RAM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
