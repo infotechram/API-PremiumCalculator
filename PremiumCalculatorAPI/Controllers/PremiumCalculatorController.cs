@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PremiumCalculatorAPI.ServiceLayer;
+using PremiumCalculatorAPI.Model;
 
 namespace PremiumCalculatorAPI.Controllers
 {
@@ -19,6 +20,12 @@ namespace PremiumCalculatorAPI.Controllers
         public IActionResult GetOccupation()
         {
             return Ok(_iService.GetOccupation().ToList());
+        }
+
+        [HttpPost(Name = "CalculatePremium")]
+        public IActionResult CalculatePremium(CustomerDetails CustomerDetails)
+        {
+            return Ok(_iService.CalculatePremium(CustomerDetails));
         }
     }
 }
