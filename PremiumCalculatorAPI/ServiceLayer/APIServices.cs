@@ -15,15 +15,17 @@ namespace PremiumCalculatorAPI.ServiceLayer
         }
         public string CalculatePremium(CustomerDetails customerDetails)
         {
+            string result = "0";
             List<OccupationRating> lstoccRating = _iRepo.GetOccupationRatings();
             lstoccRating = lstoccRating.Where(x => x.occupationRating == customerDetails.occupationValue).Select(y => new OccupationRating { 
                 occupationFactor = y.occupationFactor, 
                 occupationRating = y.occupationRating }).ToList();
-            if(lstoccRating.Count > 0 )
+            if(lstoccRating.Count > 0  && )
             {
-                return ( (Convert.ToDecimal(customerDetails.insuredAmount) * Convert.ToDecimal(lstoccRating[0].occupationFactor) * customerDetails.age) / 1000 * 12).ToString();
+                 result =  ( (Convert.ToDecimal(customerDetails.insuredAmount) * Convert.ToDecimal(lstoccRating[0].occupationFactor) * customerDetails.age) / 1000 * 12).ToString();
+          
             }
-            return "0";
+            return result;
         }
     }
 }

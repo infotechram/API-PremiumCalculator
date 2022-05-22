@@ -11,6 +11,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<iService, APIServices>();
 builder.Services.AddTransient<iRepo, APIRepository>();
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 var app = builder.Build();
 
@@ -20,7 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("corsapp");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
